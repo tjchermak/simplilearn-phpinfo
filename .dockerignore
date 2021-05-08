@@ -1,0 +1,4 @@
+# Blocks all files to docker engine
+**/*
+#allows sorce folder to be sent to Docker engine
+!src
