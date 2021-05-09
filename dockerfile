@@ -1,7 +1,7 @@
 # Download alpine docker image (alpine does not have the Kernel
 FROM alpine
 
-#Install php inside the container (similar to apt install php)
+#Install php inside the container (similar to apt install php) this is preparing the image
 RUN apk add php
 
 # Create app folder
@@ -12,7 +12,7 @@ COPY src/index.php /app
 
 # run command in the container S creates the webserver on  port 8080 service index.php file
 #php -f index.php -S 0.0.0.0:8080
-# Entrypoint runs the following command .. php
+# Entrypoint runs the following command .. php this is for creating the future container
 ENTRYPOINT ["php"]
 
 # pass this argument to the command
