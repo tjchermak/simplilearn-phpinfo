@@ -1,4 +1,4 @@
-# Download alpine docker image (alpine does not have the Kernel
+# Download alpine docker image (alpine does not have the Kernel)
 FROM alpine
 
 #Install php inside the container (similar to apt install php) this is preparing the image
