@@ -9,4 +9,8 @@ services:
     image: tjchermak/simplilearn-phpinfo:latest
     ports:
       - 80:8080
+    volumes:
+      - phpinfo:/data
 version: '3.8'
+volumes:
+  phpinfo:
