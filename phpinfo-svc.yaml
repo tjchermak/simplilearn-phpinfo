@@ -1,0 +1,11 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: simplilearn-phpinfo-svc
+spec:
+  ports:
+    - name: http
+      port: 80
+      targetPort: 8080
+  selector:
+    app: simplilearn-phpinfo
