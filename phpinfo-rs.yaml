@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: simplilearn-phpinfo-rs
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: simplilearn-phpinfo
+  template:
+    metadata:
+      labels:
+        app: simplilearn-phpinfo
+    spec:
+      containers:
+      - name: simplilearn-phpinfo-container
+        image: tjchermak/simplilearn-phpinfo:latest
+        command:
+          - "php"
+        args: 
+          - "-f"
+          - "index.php"
+          - "-S"
+          - "0.0.0.0:8080"
