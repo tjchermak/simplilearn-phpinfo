@@ -5,7 +5,7 @@ metadata:
 spec:
   containers:
     - name: simplilearn-phpinfo-container
-      image:  tjchermak/simplilearn-phpinfo-container
+      image:  tjchermak/simplilearn-phpinfo:latest
       command: 
         - "php"
       args:
